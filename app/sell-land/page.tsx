@@ -115,17 +115,6 @@ function SellLandComponent() {
                 )}
 
                 <div className="space-y-2">
-                  <Label htmlFor="expectedPrice">Expected Price ($)</Label>
-                  <Input
-                    id="expectedPrice"
-                    type="number"
-                    value={expectedPrice}
-                    onChange={(e) => setExpectedPrice(e.target.value)}
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
                   <Button type="button" onClick={handleAIPrediction} className="w-full">
                     <TrendingUp className="mr-2 h-4 w-4" /> Use AI Predictor for Price Estimation
                   </Button>
@@ -137,6 +126,18 @@ function SellLandComponent() {
                     </div>
                   )}
                 </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="expectedPrice">Selling Price ($)</Label>
+                  <Input
+                    id="expectedPrice"
+                    type="number"
+                    value={expectedPrice}
+                    onChange={(e) => setExpectedPrice(e.target.value)}
+                    required
+                  />
+                </div>
+
 
                 <div className="space-y-2">
                   <Label htmlFor="description">Property Description</Label>
